@@ -2,65 +2,86 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/style.CSS" />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.CSS" />
     <title>Document</title>
   </head>
   <body>
-    <div class="weather-app">
-      <header>
-        <form class="search-form" id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city.."
-            required
-            id="search-form-input"
-            class="search-form-input"
-          />
-          <input type="submit" value="search" class="search-form-button" />
-        </form>
-      </header>
-      <main>
-        <div class="weather-app-data">
-          <div>
-            <h1 class="weather-app-city" id="city">City Name</h1>
-            <p class="weather-app">
-              <span id="time"></span>, <span id="description"></span> <br />
-
-              <br />
-              Humidity:
-              <strong><span id="humidity">--%</span></strong
-              >, Wind:
-              <strong><span id="wind">--km/h</span></strong>
-            </p>
-          </div>
-          <div class="weather-app-temperature-container">
-            <div class="weather-app-icon">⛅</div>
-            <div class="weather-app-temperature" id="temperature-main"></div>
-            <div class="weather-app-unit">&deg;C</div>
-          </div>
-        </div>
-      </main>
-      <footer>
-        This project was coded by
-        <a href="https://github.com/Apelele05" target="_blank">Apelele Kufa</a>,
-        code hosted
-        <a href="https://github.com/Apelele05/Skywatcher/" target="_blank"
-          >on Github</a
-        >
-        and website hosted
-        <a
-          href="https://main--skywatcher-shecodes-app.netlify.app/"
-          target="_blank"
-          >on netlify</a
-        >
-      </footer>
+    <div class="application-form">
+      <h1>
+        KUFA PAINTING SERVICES APPLICATION FORM
+        <hr />
+      </h1>
     </div>
-    <script src="src/index.js"></script>
+    <div class="painting-form"></div>
+    <main>
+      <form class="search-form">
+        <label for="full name">Applicant full name:</label>
+        <br />
+        <div class="inline-fields">
+          <input type="text" placeholder="First "  class="styled-input" required />
+
+          <input type="text" placeholder="Last " class="styled-input" required />
+        </div>
+        <div>
+          <br />
+          <label for="date of birth">Date of birth:</label>
+          <input type="date"  class="styled-input" />
+        </div>
+        <br /><label for="text">Phone:</label>
+        <input type="text" name="phone"  class="styled-input" />
+       <br><br> <label for="text">Alternative phone:</label>
+        <input type="text" name="Alternative phone" class="styled-input">
+
+        <div>
+          <br /><label for="emai address">Email address:</label>
+          <input type="email" name="email address" class="styled-input" required />
+        </div>
+        <br />
+        <div class="home-address">
+          <label for="text">Home address:</label><br />
+          <div class="inline-field">
+            <input type="text" placeholder="Street Address" class="styled-input" />
+            <input type="text" placeholder="Street Address line 2" class="styled-input"/>
+          </div>
+          <br />
+          <div class="input-field">
+          <input type="text" placeholder="city" class="styled-input" />
+          <input type="text" placeholder="Postal Code" class="styled-input" required />
+        </div>
+
+        <br><label for="date">Application date:</label>
+        <input type="date" name="date" class="styled-input" />
+      </form>
+
+      <br /><label for="text"
+        ><br>Do you have experience with residential, commercial, or industrial
+        painting?
+      </label>
+      <input type="text" name="experience" class="styled-input" />
+      <p>Are you physically able to stand or move for long periods?</p>
+      <label>
+        <input type="radio" name="medical-condition" value="yes" />Yes
+      </label>
+      <label>
+        <input type="radio" name="medical-condition" value="no" />NO
+      </label>
+      <p>Are you available to start immediately?</p>
+      <label
+        ><input
+          type="radio"
+          name="available-immediately"
+          value="yes"
+        />Yes</label
+      >
+      <label
+        ><input type="radio" name="available-immediately" value="no" />NO</label
+      >
+      <br /><br /><button type="submit">Submit Application</button>
+    </main>
   </body>
 </html>
